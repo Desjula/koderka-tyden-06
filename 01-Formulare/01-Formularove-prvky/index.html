@@ -22,6 +22,7 @@
 	-->
 
 
+	<form action="http://formular.itgirls.cz" method="post">
 
 		<!--
 			INPUT
@@ -38,13 +39,29 @@
 			required  ... povinné pole, kontroluje prohlížeč při pokusu o odeslání
 		-->
 
+		<label for="jmeno">Jméno</label>
+		<input type="text"
+		name="jmeno"
+		id="jmeno"
+		maxlength="15"
+		placeholder="Křestní jméno"
+		autofocus
+		required>
 
+		<hr>
 
 		<!--
 			LABEL - popisek formulářového pole
 			for: id formulářového prvku, pro který je toto popisek
 		-->
 
+		<label>
+			Příjmení
+			<input type="text" name="prijmeni" id="prijmeni" required>
+
+		</label>
+
+		<hr>
 
 
 		<!--
@@ -69,7 +86,9 @@
 			value: text na tlačítku
 		-->
 
+		<button type="submit">Odeslat</button>
 
+		<hr>
 
 		<!--
 			Další typy vstupních polí:
@@ -81,12 +100,26 @@
 			Další atributy: min, max, step
 		-->
 
+		<label for="cislo">Číslo</label>
+		<input
+		type="number"
+		name="cislo"
+		id="cislo"
+		min="100"
+		max="1"
+		value="10">
+
+		<hr>
 
 		<!--
 			EMAIL - emailová adresa
 			URL - webová adresa
 		-->
 
+		<label for="emial">E-mail</label>
+		<input type="email" name="email" id="email">
+
+		<hr>
 
 		<!--
 			TEL - telefonní číslo
@@ -94,6 +127,10 @@
 			protože na mobilu většinou zobrazí klávesnici pouze s číslicemi 0-9.
 		-->
 
+		<label for="telefon">Telefon</label>
+		<input type="tel" name="telefon" id="telefon">
+
+		<hr>
 
 		<!--
 			DATE - datum
@@ -101,11 +138,25 @@
 		-->
 
 
+		<label for="datum">Datum</label>
+		<input type="date" name="datum" id="datum">
+
+		<hr>
+
+		<label for="datumacas">Datum a čas</label>
+		<input type="datetime-local" name="datumacas" id="datumacas">
+
+		<hr>
+		
 		<!--
 			PASSWORD - heslo
 			zobrazuje hvězdičky místo textu
 		-->
 
+		<label for="heslo">Heslo</label>
+		<input type="password" name="heslo" id="heslo">
+
+		<hr>
 
 		<!--
 			HIDDEN - skryté pole
@@ -113,8 +164,9 @@
 			ale pole na stránce není vidět.
 		-->
 
+		<input type="hidden" name="skryte" id="skryte" value="ja se nudim">
 
-
+		<hr>
 
 		<!--
 			TEXTAREA - víceřádkové textové pole
@@ -125,7 +177,13 @@
 			maxlength: max. počet znaků, která jdou zadat
 		 -->
 
+		<label for="adresa">Bydliště</label>
+		<textarea name="adresa" id="adresa">
+Ulice 6
+Mestečko
+123 45</textarea>
 
+<hr>
 
 		<!--
 			CHECKBOX - zaškrtávácí políčko
@@ -137,7 +195,10 @@
 			disabled, required
 		-->
 
+		<input type="checkbox" name="souhlas" id="souhlas" value="ano">
+		<label for="souhlas">Souhlasím s obchodními podmínkami</label>
 
+		<hr>
 
 		<!--
 			RADIO - přepínače (jen jeden ze skupiny může být vybraný)
@@ -154,9 +215,20 @@
 			disabled, required
 		-->
 
+		<fieldset>
+			<legend>Oblíbené ovoce</legend>
 
+			<input type="radio" name="ovoce" id="banana" value="banán">
+			<label for="banana">Banán</label>
+			<input type="radio" name="ovoce" id="meloun" value="meloun" checked>
+			<label for="bmeloun">Meloun</label>
+			<input type="radio" name="ovoce" id="jablko" value="jablko">
+			<label for="jablko">Jablko</label>
+			<input type="radio" name="ovoce" id="hruska" value="hruška">
+			<label for="hruska">Hruška</label>
 
-
+</fieldset>
+		<hr>
 
 		<!--
 			SELECT - roletka, výběr z možností
@@ -174,8 +246,14 @@
 			selected ... výchozí vybraná hodnota
 		-->
 
+		<label for="mesto">Město</label>
 
-
+		<select name="mesto" id="mesto">
+			<option>Nejlepší město</option>
+			<option value="65500">Brno</option>
+			<option value="64300">Praha</option>
+			<option value="66400">Olomouc</option>
+		</select>
 
 		<!--
 			FIELDSET - seskupení polí formuláře
@@ -185,7 +263,7 @@
 		-->
 
 
-
+	</form>
 
 </body>
 </html>

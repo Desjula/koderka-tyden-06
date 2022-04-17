@@ -13,13 +13,29 @@
 
 	<!-- Label a pole pod sebou -->
 
+	<form action="https://formular.itgirls.cz" method="post">
+	<div class="form-field">
+		<label for="jmeno">Jméno</label>
+		<input type="text" name="jmeno" id="jmeno">
+	</div>
 
+	<div class="form-field">
+		<label for="prijmeni">Příjmení<span class="required">*</span></label>
+		<input type="text" name="prijmeni" id="prijmeni" required>
+	</div>
 
 	<!-- Label a pole vedle sebe -->
 
+	<div class="form-horizontal">
+		<label for="prezdivka">Přezdívka</label>
+		<input type="text" name="prezdivka" id="prezdivka">
+	</div>
 
-
-
+	<div class="form-horizontal">
+		<label for="vek">Věk</label>
+		<input type="number" name="vek" id="vek">
+ 	</div>
+	
 	<!--
 		Stylování textového pole <input> nebo <textarea> a tlačítek <button>
 		- margin, padding, border, barvy, písmo
@@ -50,6 +66,9 @@
 		- :focus, :valid, :invalid, :placeholder-shown
 	-->
 
+	<button txpe="submit">OK</button>
+
+</form>
 
 </body>
 </html>
